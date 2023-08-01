@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.username {
+    color: aliceblue;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+}
+
+.graph {
+    display: flex;
+    justify-content: center;
+}

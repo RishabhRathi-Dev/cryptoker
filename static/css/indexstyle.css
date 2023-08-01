@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 15%;
+    border: 2px;
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+.MainHeading {
+    display: flex;
+    justify-content: center;
+}
+
+.UserNameForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+}
+
+.UsrNmInput {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.SubmitButton {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}

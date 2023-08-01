@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.NotFoundTopLevel {
+    display: flex;
+    margin-top: 20%;
+    justify-content: center;
+}
+
+.NotFoundHeading {
+    color: aliceblue;
+}
