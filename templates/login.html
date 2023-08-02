@@ -2,9 +2,13 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
+    <div class="header-section">
+        <h1 class="header-title">Cryptoker</h1>
+    </div>
+    
     <div class="container">
         <h2>Login</h2>
         <form method="post" action="/login">

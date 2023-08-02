@@ -106,3 +106,37 @@ input[type="checkbox"] {
     height: 10px;
     border-radius: 50%;
 }
+
+/* Additional Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.chart-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .chart-container {
+        max-width: 100%;
+    }
+}

@@ -4,6 +4,19 @@ body {
     padding: 0;
 }
 
+.header-section {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-title {
+    color: #fff;
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
 .container {
     max-width: 400px;
     margin: 0 auto;
@@ -60,4 +73,37 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .header-title {
+        font-size: 30px;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+    
+    .header-title {
+        font-size: 28px;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        padding: 6px;
+    }
 }
