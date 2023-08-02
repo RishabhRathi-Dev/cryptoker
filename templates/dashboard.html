@@ -11,22 +11,31 @@
     <div class="container">
         <h1>Cryptocurrency Price Dashboard</h1>
         <form id="cryptoForm" method="post">
-            <label>Select cryptocurrencies to follow:</label><br>
-            {% for crypto in available_cryptos %}
-            <input type="checkbox" id="{{ crypto }}" name="cryptos" value="{{ crypto }}" {% if crypto in selected_cryptos %}checked{% endif %}>
-            <label for="{{ crypto }}">{{ crypto }}</label><br>
-            {% endfor %}
+            <div class="dropdown" data-control="checkbox-dropdown">
+                <label class="dropdown-label">Select cryptocurrencies to follow:</label>
+                <div class="dropdown-list">
+                    <a href="#" data-toggle="check-all" class="dropdown-option">Check All</a>
+                    {% for crypto in available_cryptos %}
+                        <label class="dropdown-option">
+                            <input type="checkbox" name="cryptos" value="{{ crypto }}" {% if crypto in selected_cryptos %}checked{% endif %}>
+                            {{ crypto }}
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
             <button type="submit">Save Preferences</button>
         </form>
         <div class="chart-container">
             <canvas id="chart"></canvas>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const selectedCryptos = {{ selected_cryptos | tojson }};
         const currencyData = {{ currency_data | tojson }};
     </script>
     <script src="{{ url_for('static', filename= 'js/live_chart.js') }}"></script>
+    <script src="{{ url_for('static', filename= 'js/checkbox_dropdown.js') }}"></script>
 </body>
 </html>
