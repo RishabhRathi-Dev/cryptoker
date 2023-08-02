@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 data: currencyData.map(entry => entry.price),
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderWidth: 1
+                borderWidth: 2,
+                borderRadius: 5,
+                borderSkipped: false,
             }]
         },
         options: {
@@ -84,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
             if (data.success) {
                 console.log('Cryptocurrency preferences saved successfully!');
+                location.reload();
             } else {
                 console.error('Failed to save cryptocurrency preferences.');
             }
